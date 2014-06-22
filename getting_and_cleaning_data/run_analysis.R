@@ -18,4 +18,4 @@ data.merged <- merge(x = data, y = activity_labels, by = 'activityCode')
 data.grouped <- aggregate(. ~ activity + subject, data = data.merged, FUN = mean)
 
 write.table(data.merged, 'cleaned_data.txt', row.names = F)
-write.table(data.grouped, 'avg_statistics.txt', row.names = F)
+write.table(data.grouped, 'avg_stat.txt', row.names = F)
